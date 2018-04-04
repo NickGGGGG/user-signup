@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<table>
+    <tbody>
+        <tr>
+            <td>
+                <label>
+                    Username
+                    <input type="text" name="username"/>
+                </label>
+            </td>
+        </tr>    
+        <tr>
+            <td>
+                <label>
+                    Password
+                    <input type="text" name="password"/>
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>
+                    Verify Password
+                    <input type="text" name="verify_password"/>
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>
+                    Email (optional)
+                    <input type="text" name="email"/>
+                </label>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<input type="submit"/>
+
+{% endblock %}

@@ -2,42 +2,38 @@
 
 {% block content %}
 
-<table>
-    <tbody>
+<form method="POST">
+    <table>
         <tr>
+            <td><label for="username">Username</label></td>
             <td>
-                <label>
-                    Username
-                    <input type="text" name="username"/>
-                </label>
-            </td>
-        </tr>    
-        <tr>
-            <td>
-                <label>
-                    Password
-                    <input type="text" name="password"/>
-                </label>
+                <input name="username" type="text" value="{{username}}">
+                <span class="error">{{username_error}}</span>
             </td>
         </tr>
         <tr>
+            <td><label for="password">Password</label></td>
             <td>
-                <label>
-                    Verify Password
-                    <input type="text" name="verify_password"/>
-                </label>
+                <input name="password" type="password" value="{{password}}">
+                <span class="error">{{password_error}}</span>
             </td>
         </tr>
         <tr>
+            <td><label for="verify">Verify Password</label></td>
             <td>
-                <label>
-                    Email (optional)
-                    <input type="text" name="email"/>
-                </label>
+                <input name="v_password" type="password" value="{{v_password}}">
+                <span class="error">{{v_password_error}}</span>
             </td>
         </tr>
-    </tbody>
-</table>
-<input type="submit"/>
+        <tr>
+            <td><label for="email">Email (optional)</label></td>
+            <td>
+                <input name="email" value="{{email}}">
+                <span class="error">{{email_error}}</span>
+            </td>
+        </tr>
+    </table>
+    <input type="submit">
+</form>
 
 {% endblock %}
